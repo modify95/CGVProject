@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="460.0" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StaffMainController">
+   <children>
+      <HBox alignment="CENTER">
+         <children>
+            <Label text="예매" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" spacing="10.0">
+         <children>
+            <Button fx:id="btnTicketing" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="영화 예매" />
+            <Button fx:id="btnCancelTicketing" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="예매 취소" />
+            <Button fx:id="btnLogout" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="로그아웃" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="30.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisteController">
+   <padding>
+      <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+   </padding>
+   <children>
+      <HBox alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/account.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <Label text="아이디    :" />
+            <TextField fx:id="txtId">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="btnOverlap" text="중복확인" />
+            <Label text="아이디는 영문, 숫자 혼합 6~20자리" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <Label text="비밀번호 :" />
+            <PasswordField fx:id="txtPw" />
+            <Label text="비밀번호 확인 :" />
+            <PasswordField fx:id="txtPwConfirm" />
+            <Label text="비밀번호는 소문자 영문, 숫자 혼합 8~20자리" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <Label text="이름       :" />
+            <TextField fx:id="txtName" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <Label text="생년월일 :" />
+            <ComboBox fx:id="cbYear" prefHeight="23.0" prefWidth="74.0" />
+            <Label text="년" />
+            <ComboBox fx:id="cbMonth" prefHeight="23.0" prefWidth="60.0" />
+            <Label text="월" />
+            <ComboBox fx:id="cbDay" prefHeight="23.0" prefWidth="59.0" />
+            <Label text="일" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <Label text="전화번호 :" />
+            <TextField fx:id="txtPhone" />
+            <Label text="- 빼고 입력해주세요" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" spacing="20.0">
+         <children>
+            <Button fx:id="btnRegiste" prefHeight="40.0" prefWidth="70.0" text="등록" />
+            <Button fx:id="btnExit" prefHeight="40.0" prefWidth="70.0" text="닫기" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

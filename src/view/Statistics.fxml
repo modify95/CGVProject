@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<TabPane tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StatisticsController">
+  <tabs>
+      <Tab closable="false" text="실시간 예매율">
+         <content>
+            <VBox spacing="10.0">
+               <children>
+                  <HBox prefHeight="23.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="btnSearchCurrent" mnemonicParsing="false" text="새로고침" />
+                        <Button fx:id="btnSaveCurrent" mnemonicParsing="false" text="Exel 저장" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tvCurrent" prefHeight="502.0" prefWidth="787.0">
+                     <columns>
+                        <TableColumn fx:id="colRank1" editable="false" maxWidth="45.0" minWidth="45.0" prefWidth="45.0" style="-fx-alignment: CENTER;" text="순위" />
+                        <TableColumn fx:id="colTitle1" editable="false" prefWidth="310.0" text="영화명" />
+                        <TableColumn fx:id="colOpenDate1" editable="false" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" style="-fx-alignment: CENTER;" text="개봉일" />
+                        <TableColumn fx:id="colSales1" editable="false" prefWidth="170.0" text="매출액" />
+                        <TableColumn fx:id="colAttendance1" editable="false" prefWidth="170.0" text="관객수" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label text="실시간 총 매출 :" />
+                        <Label fx:id="lbCurrentSales" text="0원" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <children>
+                        <Label text="실시간 총 관객수 :" />
+                        <Label fx:id="lbCurrentAttendance" text="0명" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </content>
+      </Tab>
+    <Tab closable="false" text="일별 조회">
+         <content>
+            <VBox spacing="10.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label text="조회 기간 :" />
+                        <DatePicker fx:id="dpDay" />
+                        <Button fx:id="btnSearchDay" mnemonicParsing="false" text="검색" />
+                        <Button fx:id="btnSaveDay" mnemonicParsing="false" text="Exel 저장" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tvDay" prefHeight="502.0" prefWidth="787.0">
+                    <columns>
+                      <TableColumn fx:id="colRank2" editable="false" maxWidth="45.0" minWidth="45.0" prefWidth="45.0" style="-fx-alignment: CENTER;" text="순위" />
+                      <TableColumn fx:id="colTitle2" editable="false" prefWidth="310.0" text="영화명" />
+                        <TableColumn fx:id="colOpenDate2" editable="false" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" style="-fx-alignment: CENTER;" text="개봉일" />
+                        <TableColumn fx:id="colSales2" editable="false" prefWidth="170.0" text="매출액" />
+                        <TableColumn fx:id="colAttendance2" editable="false" prefWidth="170.0" text="관객수" />
+                    </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label text="일별 총 매출 :" />
+                        <Label fx:id="lbDaySales" text="0원" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <children>
+                        <Label text="일별 총 관객수 :" />
+                        <Label fx:id="lbDayAttendance" text="0명" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </content></Tab>
+    <Tab closable="false" text="월별 조회">
+         <content>
+            <VBox spacing="10.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <ComboBox fx:id="cbYear1" prefWidth="100.0" />
+                        <ComboBox fx:id="cbMonth" prefWidth="80.0" />
+                        <Button fx:id="btnSearchMonth" mnemonicParsing="false" text="검색" />
+                        <Button fx:id="btnSaveMonth" mnemonicParsing="false" text="Exel 저장" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tvMonth" prefHeight="502.0" prefWidth="787.0">
+                     <columns>
+                        <TableColumn fx:id="colRank3" editable="false" maxWidth="45.0" minWidth="45.0" prefWidth="45.0" style="-fx-alignment: CENTER;" text="순위" />
+                        <TableColumn fx:id="colTitle3" editable="false" prefWidth="310.0" text="영화명" />
+                        <TableColumn fx:id="colOpenDate3" editable="false" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" style="-fx-alignment: CENTER;" text="개봉일" />
+                        <TableColumn fx:id="colSales3" editable="false" prefWidth="170.0" text="매출액" />
+                        <TableColumn fx:id="colAttendance3" editable="false" prefWidth="170.0" text="관객수" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label text="월별 총 매출 :" />
+                        <Label fx:id="lbMonthSales" text="0원" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <children>
+                        <Label text="월별 총 관객수 :" />
+                        <Label fx:id="lbMonthAttendance" text="0명" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </content></Tab>
+      <Tab closable="false" text="연도별 조회">
+         <content>
+            <VBox spacing="10.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <ComboBox fx:id="cbYear2" prefWidth="100.0" />
+                        <Button fx:id="btnSearchYear" mnemonicParsing="false" text="검색" />
+                        <Button fx:id="btnSaveYear" mnemonicParsing="false" text="Exel 저장" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tvYear" prefHeight="502.0" prefWidth="787.0">
+                     <columns>
+                        <TableColumn fx:id="colRank4" editable="false" maxWidth="45.0" minWidth="45.0" prefWidth="45.0" style="-fx-alignment: CENTER;" text="순위" />
+                        <TableColumn fx:id="colTitle4" editable="false" prefWidth="310.0" text="영화명" />
+                        <TableColumn fx:id="colOpenDate4" editable="false" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" style="-fx-alignment: CENTER;" text="개봉일" />
+                        <TableColumn fx:id="colSales4" editable="false" prefWidth="170.0" text="매출액" />
+                        <TableColumn fx:id="colAttendance4" editable="false" prefWidth="170.0" text="관객수" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label text="연도별 총 매출 :" />
+                        <Label fx:id="lbYearSales" text="0원" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <children>
+                        <Label text="연도별 총 관객수 :" />
+                        <Label fx:id="lbYearAttendance" text="0명" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="main" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TicketingController">
+   <children>
+      <VBox alignment="CENTER" spacing="10.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT">
+               <children>
+                  <Button fx:id="btnReset" mnemonicParsing="false" prefHeight="31.0" prefWidth="92.0" text="예매 다시하기" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <TableView fx:id="tvMovie" prefHeight="595.0" prefWidth="319.0">
+                    <columns>
+                      <TableColumn fx:id="colMovie" editable="false" maxWidth="318.0" minWidth="318.0" prefWidth="318.0" resizable="false" sortable="false" text="영화" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="tvDate" prefHeight="595.0" prefWidth="138.0">
+                     <columns>
+                        <TableColumn fx:id="colDate" editable="false" maxWidth="137.0" minWidth="137.0" prefWidth="137.0" resizable="false" sortable="false" text="날짜" />
+                     </columns>
+                  </TableView>
+                  <ScrollPane prefHeight="595.0" prefWidth="434.0">
+                     <content>
+                        <VBox fx:id="vbTime" prefWidth="431.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="23.0" prefWidth="362.0">
+                                 <children>
+                                    <Label text="시간" />
+                                 </children>
+                              </HBox>
+                              <Separator prefWidth="200.0" />
+                              <VBox fx:id="vbox" spacing="10.0">
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin></VBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </HBox>
+            <HBox spacing="5.0">
+               <children>
+                  <HBox prefWidth="212.0" spacing="5.0">
+                     <children>
+                        <ImageView fx:id="imgPoster" fitHeight="104.0" fitWidth="74.0" pickOnBounds="true">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox spacing="10.0">
+                           <children>
+                              <Label fx:id="lbM_Title" text="" />
+                              <Label fx:id="lbM_Grade" text="" />
+                           </children>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Separator orientation="VERTICAL" />
+                  <HBox prefWidth="187.0" spacing="5.0">
+                     <children>
+                        <VBox spacing="10.0">
+                           <children>
+                              <Label prefWidth="36.0" text="일시" />
+                              <Label prefWidth="36.0" text="상영관" />
+                              <Label prefWidth="36.0" text="인원" />
+                           </children>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox spacing="10.0">
+                           <children>
+                              <Label fx:id="lbS_Date" />
+                              <Label fx:id="lbC_name" />
+                              <HBox fx:id="hbPerson" />
+                           </children>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Separator orientation="VERTICAL" />
+                  <HBox prefWidth="173.0" spacing="5.0">
+                     <children>
+                        <VBox spacing="10.0">
+                           <children>
+                              <Label text="좌석번호" />
+                           </children>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox fx:id="vbSeatNum" prefWidth="110.0" spacing="10.0">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Separator orientation="VERTICAL" />
+                  <HBox prefWidth="155.0" spacing="5.0">
+                     <children>
+                        <VBox spacing="10.0">
+                           <children>
+                              <Label text="일반" />
+                              <Label text="청소년" />
+                              <Label text="총금액" />
+                           </children>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox fx:id="vbPay" spacing="10.0">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <AnchorPane fx:id="apBtn" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

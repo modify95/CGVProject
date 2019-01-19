@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefHeight="711.0" prefWidth="445.0" spacing="10.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label text="영화입장권">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <HBox>
+         <children>
+            <Label fx:id="lbSysdate" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label fx:id="lbGrade" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label fx:id="lbTitle">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label fx:id="lbScreenTime">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label fx:id="lbCinemaSeat">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="65.0">
+         <children>
+            <Label fx:id="lbTotalCount">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label text="[주차안내]">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label text="- 일일 관람횟수와 관계없이 당일 영화 티켓 제시 이용 시 1시간 추가" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label text="- 매점 이용 시 1시간 추가" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label text="- 건물 내 최대 4시간 무료 주차 가능" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label text="- 4시간 이후 10분당 1,000원" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="46.0">
+         <children>
+            <Label text="CGV 왕십리">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label text="교환 및 환불은 상영시간 전까지 영수증 지참" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label text="입장지연에 따른 관람불편을 최소화하고자" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label text="본영화는 약 10여분 후에 시작됩니다." />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label text="관람에티켓을 위한 사전입장을 부탁드립니다." />
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" prefHeight="87.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/barcode.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label fx:id="lbTNum" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="50.0" />
+   </padding>
+</VBox>

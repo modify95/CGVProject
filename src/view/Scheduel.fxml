@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ScheduelController">
+   <children>
+      <VBox prefWidth="530.0" spacing="10.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label text="영화 선택" />
+                  <ComboBox fx:id="cbMovie" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <Label text="영화 정보" />
+            <HBox spacing="10.0">
+               <children>
+                  <ImageView fx:id="imgPoster" fitHeight="260.0" fitWidth="185.0" pickOnBounds="true" />
+                  <VBox spacing="15.0">
+                     <children>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label prefWidth="64.0" text="영화 제목" />
+                              <Label fx:id="lb_M_Title" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label prefWidth="64.0" text="장르" />
+                              <Label fx:id="lb_M_Genre" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label prefWidth="64.0" text="개봉 국가" />
+                              <Label fx:id="lb_M_Nation" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label prefWidth="64.0" text="상영 시간" />
+                              <Label fx:id="lb_M_RunTime" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label prefWidth="64.0" text="개봉일" />
+                              <Label fx:id="lb_M_OpenDate" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label prefWidth="64.0" text="상영 종료일" />
+                              <Label fx:id="lb_M_CloseDate" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label prefWidth="64.0" text="관람 등급" />
+                              <Label fx:id="lb_M_Grade" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label prefWidth="64.0" text="감독" />
+                              <Label fx:id="lb_M_Director" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label text="상영관" />
+                  <ComboBox fx:id="cbCinema" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <Label text="시간은 24시간 단위입니다." />
+            <Label text="상영 종료 시간은 자동으로 계산됩니다." />
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label text="상영시작시간" />
+                  <DatePicker fx:id="dpStartTime" editable="false" prefHeight="23.0" prefWidth="115.0" />
+                  <ComboBox fx:id="cbStartHour" prefHeight="23.0" prefWidth="64.0" />
+                  <Label text="시" />
+                  <ComboBox fx:id="cbStartMin" prefHeight="23.0" prefWidth="64.0" />
+                  <Label text="분" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label text="상영종료시간" />
+                  <TextField fx:id="txtFinishTime" editable="false" prefWidth="115.0" />
+                  <TextField fx:id="txtFinishHour" editable="false" prefWidth="64.0" />
+                  <Label text="시" />
+                  <TextField fx:id="txtFinishMin" editable="false" prefWidth="64.0" />
+                  <Label text="분" />
+               </children>
+            </HBox>
+            <Label text="가격은 자동으로 설정됩니다." />
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label prefHeight="15.0" prefWidth="36.0" text="일반" />
+                  <TextField fx:id="txtAdultPay" editable="false" />
+                  <Label text="원" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label prefWidth="36.0" text="청소년" />
+                  <TextField fx:id="txtChildPay" editable="false" />
+                  <Label text="원" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="45.0" prefWidth="510.0" spacing="10.0">
+               <children>
+                  <Button fx:id="btnAddScheduel" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="등록" />
+                  <Button fx:id="btnDelete" disable="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="삭제" />
+                  <Button fx:id="btnExit" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="닫기" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <TableView fx:id="tvScheduel" prefHeight="659.0" prefWidth="497.0">
+        <columns>
+          <TableColumn fx:id="colMovie" editable="false" minWidth="200.0" prefWidth="200.0" sortable="false" text="영화 제목" />
+            <TableColumn fx:id="colCinemaName" editable="false" maxWidth="56.0" minWidth="56.0" prefWidth="56.0" sortable="false" style="-fx-alignment: center" text="상영관" />
+          <TableColumn fx:id="colOpenDate" editable="false" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" sortable="false" style="-fx-alignment: center" text="상영시작시간" />
+            <TableColumn fx:id="colCloseDate" editable="false" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" sortable="false" style="-fx-alignment: center" text="상영종료시간" />
+        </columns>
+      </TableView>
+   </children>
+</HBox>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SeatController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="593.0" prefWidth="889.0">
+         <children>
+            <HBox prefHeight="96.0">
+               <children>
+                  <HBox />
+                  <HBox />
+                  <VBox alignment="CENTER" prefWidth="282.0" spacing="15.0">
+                     <children>
+                        <HBox fx:id="hbAdult" alignment="CENTER_LEFT" spacing="3.0">
+                           <children>
+                              <Label prefWidth="36.0" text="일반" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="hbChild" alignment="CENTER_LEFT" spacing="3.0">
+                           <children>
+                              <Label fx:id="lbChild" prefWidth="36.0" text="청소년" visible="false" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0">
+                     <HBox.margin>
+                        <Insets left="30.0" right="10.0" />
+                     </HBox.margin>
+                  </Separator>
+                  <VBox alignment="CENTER_LEFT" prefHeight="96.0" prefWidth="544.0" spacing="10.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" spacing="20.0">
+                           <children>
+                              <Label text="CGV왕십리" />
+                              <Label fx:id="lbCinema" />
+                              <Label fx:id="lbLeftSeat" text="남은좌석" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Label fx:id="lbScreenTime" text="상영시간" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT">
+                           <children>
+                              <Button fx:id="btnPre" mnemonicParsing="false" text="상영시간 변경하기" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox spacing="5.0">
+               <children>
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <HBox alignment="TOP_CENTER" prefHeight="115.0" prefWidth="869.0">
+                     <children>
+                        <ImageView fitHeight="27.0" fitWidth="723.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/screen.PNG" />
+                           </image>
+                           <HBox.margin>
+                              <Insets top="30.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT">
+                     <children>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/able.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="예매 가능" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT">
+                     <children>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/disable.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="예매 완료" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox>
+               <children>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Separator prefWidth="15.0" />
+                        <Label text="A" />
+                        <Separator />
+                     </children>
+                  </VBox>
+                  <HBox fx:id="hbLineA" spacing="20.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="130.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Separator prefWidth="15.0" />
+                        <Label text="B" />
+                        <Separator />
+                     </children>
+                  </VBox>
+                  <HBox fx:id="hbLineB" spacing="20.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="130.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Separator prefWidth="15.0" />
+                        <Label text="C" />
+                        <Separator />
+                     </children>
+                  </VBox>
+                  <HBox fx:id="hbLineC" spacing="20.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="130.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Separator prefWidth="15.0" />
+                        <Label text="D" />
+                        <Separator />
+                     </children>
+                  </VBox>
+                  <HBox fx:id="hbLineD" spacing="20.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="130.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Separator prefWidth="15.0" />
+                        <Label text="E" />
+                        <Separator />
+                     </children>
+                  </VBox>
+                  <HBox fx:id="hbLineE" spacing="20.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="130.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Separator prefWidth="15.0" />
+                        <Label text="F" />
+                        <Separator />
+                     </children>
+                  </VBox>
+                  <HBox fx:id="hbLineF" spacing="20.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="130.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Separator prefWidth="15.0" />
+                        <Label text="G" />
+                        <Separator />
+                     </children>
+                  </VBox>
+                  <HBox fx:id="hbLineG" spacing="20.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="130.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
